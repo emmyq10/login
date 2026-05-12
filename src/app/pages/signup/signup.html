@@ -1,0 +1,103 @@
+<div class="signup-container">
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-lg-5 col-md-7">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-5">
+
+                        <div class="text-center mb-4">
+                            <h1 class="fw-bold text-primary">
+                                Create Account
+                            </h1>
+                            <p class="text-muted">
+                                Bus Booking Login Management System
+                            </p>
+                        </div>
+
+                        <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
+
+                            <!-- Full Name -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Full Name
+                                </label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter full name"
+                                    formControlName="fullName">
+                            </div>
+
+                            <!-- Username -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Username
+                                </label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter username"
+                                    formControlName="userName">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control form-control-lg" placeholder="Enter email"
+                                    formControlName="emailId">
+                            </div>
+
+                            <!-- Role -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Role
+                                </label>
+                                <select class="form-select form-select-lg" formControlName="role">
+                                    <option value="">
+                                        Select role
+                                    </option>
+                                    <option value="Admin">
+                                        Admin
+                                    </option>
+                                    <option value="User">
+                                        User
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- Project Name -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Project Name
+                                </label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter project name"
+                                    formControlName="projectName">
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control form-control-lg" placeholder="Enter password"
+                                    formControlName="password">
+                            </div>
+
+                            <!-- Submit -->
+                            <button class="btn btn-primary btn-lg w-100 rounded-3" type="submit">
+                                Create Account
+                            </button>
+
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <button class="text-muted" (click)="registerUser()">
+                                Already have an account?
+                                <a routerLink="/login" class="text-decoration-none fw-bold">
+                                    Login
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
