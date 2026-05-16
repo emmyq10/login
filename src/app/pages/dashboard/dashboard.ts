@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Auth } from '../../services/auth';
+import { Auth } from '../../services/auth.';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,19 +10,20 @@ import { Auth } from '../../services/auth';
   styleUrls: ['./dashboard.css'],
 })
 export class Dashboard implements OnInit {
-
   auth = inject(Auth);
 
   users: any[] = [];
 
   ngOnInit(): void {
+    console.log('Dashboard Loaded');
     this.getAllUsers();
   }
 
   getAllUsers() {
+    console.log('API Function Running');
     this.auth.getAllUsers().subscribe({
       next: (res: any) => {
-        console.log(res);
+        console.log(JSON.stringify(res));
 
         this.users = res.data;
       },
@@ -53,5 +54,5 @@ export class Dashboard implements OnInit {
         },
       });
     }
-  } 
+  }
 }

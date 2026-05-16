@@ -22,7 +22,7 @@ export class Auth {
   }
 
   deleteUser(id: number) {
-    return this.http.delete(`https://api.freeprojectapi.com/api/BusBooking/DeleteUserByUserId/${id}`);
+    return this.http.delete(`https://api.freeprojectapi.com/api/BusBooking/DeleteUserByUserId?userId=${id}`);
   }   
 
   // onSaveEnquiry(Obj: any){

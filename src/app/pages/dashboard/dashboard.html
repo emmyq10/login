@@ -4,6 +4,7 @@
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h1 class="fw-bold text-white">
                 User Dashboard
+                Total Users: {{ users.length }}
             </h1>
         </div>
 
@@ -32,9 +33,7 @@
                             {{ user.projectName }}
                         </p>
                         <button class="btn btn-danger w-100 rounded-3" (click)="deleteUser(user.userId)">
-
                             Delete User
-
                         </button>
 
                     </div>
