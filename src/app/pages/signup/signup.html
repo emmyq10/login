@@ -27,9 +27,7 @@
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('fullName')?.touched &&
            signupForm.get('fullName')?.invalid">
-
                                     Full Name is required
-
                                 </small>
 
                             </div>
@@ -45,9 +43,7 @@
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('userName')?.touched &&
            signupForm.get('userName')?.invalid">
-
                                     Username is required
-
                                 </small>
                             </div>
 
@@ -62,9 +58,7 @@
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('emailId')?.touched &&
            signupForm.get('emailId')?.invalid">
-
                                     Valid email is required
-
                                 </small>
                             </div>
 
@@ -87,10 +81,8 @@
 
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('role')?.touched &&
-           signupForm.get('role')?.invalid">    
-
+           signupForm.get('role')?.invalid">
                                     Role is required
-
                                 </small>
                             </div>
 
@@ -104,10 +96,8 @@
 
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('projectName')?.touched &&
-           signupForm.get('projectName')?.invalid">   
-
+           signupForm.get('projectName')?.invalid">
                                     Project Name is required
-
                                 </small>
                             </div>
 
@@ -121,10 +111,8 @@
 
                                 <!-- ERROR MESSAGE -->
                                 <small class="text-danger" *ngIf="signupForm.get('password')?.touched &&
-           signupForm.get('password')?.invalid">
-
-                                    Password is required
-
+           signupForm.get('password')?.errors?.['minlength']">
+                                    Password must be at least 6 characters
                                 </small>
                             </div>
 
@@ -135,13 +123,22 @@
 
                         </form>
 
-                        <div class="text-center mt-4">
+                        <!-- <div class="text-center mt-4">
                             <button class="text-muted" (click)="registerUser()">
                                 Already have an account?
                                 <a routerLink="/login" class="text-decoration-none fw-bold">
                                     Login
                                 </a>
                             </button>
+                        </div> -->
+
+                        <div class="text-center mt-4">
+                            <span class="text-muted">
+                                Already have an account?
+                            </span>
+                            <a routerLink="/login" class="text-decoration-none fw-bold ms-1">
+                                Login
+                            </a>
                         </div>
 
                     </div>

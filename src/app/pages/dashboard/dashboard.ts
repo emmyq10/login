@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Auth } from '../../services/auth.';
+import { Auth } from '../../services/auth';
 
 @Component({
   selector: 'app-dashboard',
