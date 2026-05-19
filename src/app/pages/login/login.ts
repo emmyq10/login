@@ -39,7 +39,9 @@ export class Login {
           if (res.result) {
             alert('Login Successful');
 
-            this.router.navigateByUrl('/dashboard');
+            setTimeout(() => {
+              this.router.navigate(['/dashboard']);
+            }, 1000);
           } else {
             alert('Invalid Credentials');
           }

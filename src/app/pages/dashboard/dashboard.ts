@@ -23,9 +23,9 @@ export class Dashboard implements OnInit {
     console.log('API Function Running');
     this.auth.getAllUsers().subscribe({
       next: (res: any) => {
-        console.log(JSON.stringify(res));
+        // console.log(JSON.stringify(res));
 
-        this.users = res.data;
+        this.users = res.data?.$values || res.data || [];
       },
 
       error: (err) => {
